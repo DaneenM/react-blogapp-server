@@ -1,5 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const Sequelize = require('sequelize');
+const sequelize = new Sequelize('postgres://localhost:5432/blog_app');
 
 //Create a post
 router.post("/posts", (req, res) => {
